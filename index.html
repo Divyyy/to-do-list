@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="todo">
+            <h1>TO-DO LIST  <img src="edit.png"></h1>
+            <h2><span id="current-date"></span></h2>
+        
+            <div class="progress-container">
+                <progress id="progress-bar" value="0" max="100"></progress>
+                <span id="progress-text">NO TASK</span>
+            </div>
+        
+            <button id="toggle-btn" onclick="toggleNightMode()">
+                <img id="mode-icon" src="sun.png" alt="Toggle Night Mode">
+            </button>
+        
+            <div class="row">
+                <input type="text" id="input-box" placeholder="ADD">
+                <input type="datetime-local" id="reminder-time">
+                <button onclick="addtask()">ADD</button>
+            </div>
+        
+            <ul id="list-container"></ul> <!-- Add this line -->
+        
+            <div class="background-options">
+                <label for="background-selector">Select Background:</label>
+                <select id="background-selector" onchange="changeBackground()">
+                    <option value="default">Default</option>
+                    <option value="background1">Background 1</option>
+                    <option value="background2">Background 2</option>
+                    <option value="background3">Background 3</option>
+                </select>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

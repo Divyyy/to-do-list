@@ -1,0 +1,263 @@
+*{
+margin:auto;
+padding:0;
+font-family: cursive;
+box-sizing: border-box;
+}
+
+
+.container{
+    width:100%;
+    min-height: 100vh;
+    background-image: url('img.jpg');
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+ .todo{
+    
+   
+    
+    
+    padding: 40px 30px 70px;
+    
+
+
+} 
+.todo h1{
+    text-align: center;
+    margin-top: 0;
+    font-size: 24px;
+    color: #FFFFFf;
+} 
+
+
+.todo h1 img{
+    width:30px;
+    /* margin-left: 10px; */
+
+} 
+.row {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px; /* Add some padding to the right for balance */
+    margin-bottom: 0; /* Remove any margin to stick it to the bottom */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+     /* Optional shadow to make it stand out */
+}
+
+
+input{
+    flex:1;
+    border: none;
+    outline:none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+
+button{
+ border:none;
+ outline: none;
+ padding: 12px 40px;
+ background: #0492C2;
+ color: #fff;
+ font-size: 16px;
+ cursor: pointer;
+ border-radius: 40px;
+}
+
+ul li{
+   
+   list-style:none; 
+   font-size: 17px;
+   padding: 12px 8px 12px 50px;
+   user-select: none;
+   cursor: pointer;
+   position: relative;
+   background-color: #edeef0;
+   border-bottom: 1px solid #ccc;
+   margin-bottom: 15px; /* Adds a thin line under each task.*/
+}
+ul li::last-child{
+    border-bottom: none;  /* Remove border for the last item  */
+}
+
+ul li::before{
+content: '';
+position: absolute;
+height: 28px;
+width:28px;
+border-radius: 50%;
+background-image: url(edit\ \(1\).png);
+background-size: cover;
+background-position: center;
+top: 12px;
+left: 8px;
+
+}
+ul li.tick{
+    color:#555 ;
+    text-decoration: line-through;
+}
+ul li.tick::before{
+    background-image: url(check.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height:40px;
+    font-size: 22px;
+    color: #b15757;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #b0c1e2;
+}
+#current-date {
+    position: absolute;
+    left: 2opx;
+    top: 20px;
+    font-weight: bold;
+    color: #d0d8e2; /* Change this color code to the desired color */
+    font-weight: bold; /* Optional: Makes the date text bold */
+}
+#toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+#toggle-btn img {
+    width: 30px; /* Adjust icon size */
+}
+
+.night-mode {
+    background-image: url('night.jpg'); /* Night background */
+}
+ 
+.night-mode .todo h2,
+.night-mode input {
+    color: rgb(173, 165, 165); /* Change header and button text to white */
+    
+}
+.night-mode button{
+    background-color: #231c38;
+    
+}
+.night-mode ul li.tick{
+    color:#b43f3f ;
+    text-decoration: line-through;
+}
+
+.night-mode ul li{
+    background-color: #333030;
+    color: #f0f0f0;
+}
+
+.night-mode .row{
+    background-color: #333030;
+    
+   
+
+} 
+.night-mode #search-box {
+    background-color: #333030;
+
+}
+#search-box {
+    width: 50%;
+    padding: 5px;
+ background-color: #ccc;
+  display: block;
+  margin: 0 auto;
+   
+    margin-bottom: 20px; /* Space below search bar */
+    font-size: 12px;
+    z-index: 1;
+}
+
+.progress-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#progress-bar {
+    width: 30%;
+    height: 10px;
+    
+    background-color: #f3f3f3;
+    border-radius: 5px; /* Round the outer progress bar */
+    overflow: hidden; /* To ensure the inner bar stays inside rounded border */
+    margin: 0 auto;
+}
+
+#progress-bar::-webkit-progress-value {
+    background-color: #4caf50; /* Color of the progress bar */
+    border-radius: 10px;
+  
+}
+
+#progress-text {
+    display: block;
+    margin-top: 20px;
+    font-size: 26px;
+    
+}
+
+/* the unfilled part */
+#progress-bar::-webkit-progress-bar {
+    background-color: #e78b8b;
+    border-radius: 10px; /* Round the unfilled bar */
+}
+
+
+.high-priority {
+    border-left: 5px solid red;
+}
+
+
+.default-background {
+    background-color: #ffffff; /* Default color */
+}
+
+.background1 {
+    background-image: url('b1.jpg'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.background2 {
+    background-image: url('b2.jpg'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center; /* Light blue color */
+}
+
+.background3 {
+    background-image: url('b3.jpg'); /* Another background image URL */
+    background-size: cover;
+    background-position: center;
+}
+.edit-input {
+    width: 90%;
+    padding: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
